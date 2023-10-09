@@ -69,21 +69,22 @@ section h2 {
     margin-bottom: 16px;
 }
 
-.lista-veiculos {
+.lista-tenis {
     flex-wrap: wrap;
 }
 
-.lista-veiculos li {
+.lista-tenis li {
     list-style: none;
     max-width: 30%;
     margin-bottom: 24px;
 }
 
-.lista-veiculos li img {
+.lista-tenis li img {
+    width: 300px;
     max-width: 100%;
 }
 
-.lista-veiculos li h3 {
+.lista-tenis li h3 {
     margin: 16px 0;
 }
 
@@ -151,4 +152,90 @@ footer li {
 
 footer li img {
     height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .lista-tenis a {
+        display: block;
+        font-size: 1.5em;
+    }
+    
+    .lista-tenis img {
+        margin-right: 0
+    }
+    
+    .lista-tenis {
+        display: block;
+    }
+
+    .lista-tenis {
+        margin-bottom: 32px;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    .lista-tenis {
+        display: block;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu > li {
+        clear: both;
+    }
+    
+    .lista-tenis li {
+        display: block;
+        padding: 8px;
+    }
+    
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .lista-tenis a {
+        font-size: 1.5em;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+@media screen and (min-width: 1024px) {
+    .botao-menu {
+        display: none;
+    }
+}   
 }
