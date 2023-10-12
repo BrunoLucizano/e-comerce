@@ -1,7 +1,12 @@
-*{
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,9 +25,6 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-}
-
-header, footer {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
@@ -57,7 +59,7 @@ footer .container {
 }
 
 .linha {
-    border-top: 1px solid #192a56 ;
+    border-top: 1px solid #192a56;
     padding-top: 10px;
 }
 
@@ -116,94 +118,42 @@ button {
     font-size: 14px;
 }
 
-.form-campo {
-    margin-bottom: 16px;
-}
-
-.form-campo label {
-    font-weight: bold;
-    display: block;
-}
-
-.form-campo input,
-.form-campo textarea {
-    width: 100%;
-    display: block;
-    padding: 8px;
-}
-
-.form-campo textarea {
-    resize: none;
-    height: 120px;
-}
-
-form {
-    max-width: 360px;
-}
-
-form button {
-    max-width: 120px;
-}
-
-footer li {
-    list-style: none;
-    margin-left: 16px;
-}
-
-footer li img {
-    height: 32px;
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 640px) {
     .conteudo {
         display: block;
+    }
+
+    header div.container {
+        display: flex;
     }
 
     .container {
         max-width: 90%;
     }
 
+    #sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
     .lista-tenis a {
         display: block;
         font-size: 1.5em;
     }
-    
-    .lista-tenis img {
-        margin-right: 0
-    }
-    
-    .lista-tenis {
-        display: block;
-    }
 
-    .lista-tenis {
-        margin-bottom: 32px;
-    }
-
-    header div.container {
-        flex-direction: column;
+    .lista-tenis li img {
+        max-width: 90%;
     }
 
     .lista-tenis {
         display: block;
-        width: 100%;
-        position: relative;
-        border: none;
     }
 
-    .menu {
-        display: none;
-    }
-
-    .menu > li {
-        clear: both;
-    }
-    
     .lista-tenis li {
+        max-width: none;
         display: block;
-        padding: 8px;
     }
-    
+
     .botao-menu {
         display: flex;
         justify-content: center;
@@ -216,26 +166,39 @@ footer li img {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
         max-width: 90%;
     }
 
-    .botao-menu {
-        display: none;
+
+    .sobre {
+        width: 90%; /* Ajusta a largura do texto para 90% */
     }
 
     .lista-tenis a {
         font-size: 1.5em;
     }
-
-    .noticias {
-        grid-template-columns: repeat(2, 49%);
-    }
+}
 
 @media screen and (min-width: 1024px) {
     .botao-menu {
         display: none;
     }
-}   
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: #192a56;
+    color: #fff;
+    padding-top: 16px;
+}
+
+footer li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
 }
