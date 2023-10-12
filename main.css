@@ -169,15 +169,36 @@ button {
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
         max-width: 90%;
+        display: block;
     }
 
+    header div.container {
+        display: flex;
+        max-width: 80%;
+    }
+
+    #sobre-a-loja img {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+    }
 
     .sobre {
-        width: 90%; /* Ajusta a largura do texto para 90% */
+        width: 100%; /* Ajusta a largura do texto para 90% */
     }
 
     .lista-tenis a {
         font-size: 1.5em;
+    }
+
+    .produtos {
+        column-count: 2; /* Divide em duas colunas */
+        column-gap: 16px;
+        column-fill: auto;
+    }
+
+    .produtos li {
+        break-inside: avoid-column; /* Evita que um item seja dividido entre as colunas */
     }
 }
 
