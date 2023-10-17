@@ -167,6 +167,11 @@ button {
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
+
+    body{ 
+        overflow-x: hidden;
+    }
+
     .container {
         max-width: 90%;
         display: block;
@@ -187,19 +192,50 @@ button {
         width: 100%; /* Ajusta a largura do texto para 90% */
     }
 
-    .lista-tenis a {
-        font-size: 1.5em;
+    .lista-tenis p, h3 {
+        font-size: 1.2em;
+    }
+
+    .item-central {
+        margin: 0;
     }
 
     .produtos {
-        column-count: 2; /* Divide em duas colunas */
-        column-gap: 16px;
-        column-fill: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .produtos li {
-        break-inside: avoid-column; /* Evita que um item seja dividido entre as colunas */
+        max-width: 200%;
+        width: 45%; /* Define a largura de cada item */
+        margin: 10px 2.5%; /* Adiciona uma margem entre os itens */
+        box-sizing: border-box;
     }
+
+    .produtos img {
+        width: 100%; /* Garante que as imagens ocupem toda a largura do item */
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    footer p {
+        flex: 1 1 70%; /* Define a largura do texto à esquerda */
+        margin-left: 16px; /* Adiciona uma margem à esquerda para separar do ícone */
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: flex-end; /* Alinha as imagens à direita */
+        flex: 1 1 20%; /* Define a largura para as imagens */
+        list-style: none;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
